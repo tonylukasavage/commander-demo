@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-var _ = require('lodash'),
-	hello = require('../lib/hello'),
+var hello = require('../lib/hello'),
 	program = require('commander');
 
 program
