@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var _ = require('lodash'),
+	hello = require('../lib/hello'),
+	program = require('commander');
+
+program
+	.description('say hello')
+	.usage('names... [options]')
+	.option('-s, --salutation <salutation>', 'how to say hi', 'Hello')
+	.option('-u, --uppercase', 'branch for cloning, defaults to master');
+
+program.parse(process.argv);
+
+// execute deploy
+hello(program.args, program.opts());

@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var _ = require('lodash'),
+	pkg = require('../package.json'),
+	program = require('commander');
+
+var args = process.argv.slice(2);
+
+program
+	.description('Pittsburgh Javascript command line interface')
+	.version(pkg.version)
+	.usage('cmd [options]')
+	.command('hello', 'deploy an Innovu server');
+
+// fail on invalid command
+var cmd = args[0];
+if (cmd && cmd.indexOf('-') !== 0 && cmd !== 'help' && !_.find(program.commands, { _name: cmd })) {
+	console.error('ERROR: invalid command %s, run "pgjs help" to get command list', cmd);
+	process.exit(1);
+}
+
+program.parse(process.argv);

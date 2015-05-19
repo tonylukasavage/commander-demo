@@ -1,0 +1,28 @@
+{
+  "name": "commander-demo",
+  "version": "1.0.0",
+  "description": "commander.js demo",
+  "main": "index.js",
+  "bin": {
+    "pgjs": "./bin/pgjs",
+    "pgjs-hello": "./bin/pgjs-hello"
+  },
+  "dependencies": {
+    "commander": "^2.8.1",
+    "lodash": "^3.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tonylukasavage/commander-demo.git"
+  },
+  "author": "Tony Lukasavage",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonylukasavage/commander-demo/issues"
+  },
+  "homepage": "https://github.com/tonylukasavage/commander-demo"
+}
